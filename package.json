@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node --test test/",
+    "lint": "eslint ."
   },
-  "keywords": [],
+  "keywords": ["cicd", "security", "express"],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "CI/CD demo app with static and dynamic analysis",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "supertest": "^7.0.0"
   }
 }
