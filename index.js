@@ -6,8 +6,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/user', (req, res) => {
-    const name = req.query.name;
-    res.send("Hello " + name);
+    const name = req.query.name || "Guest";
+    res.send(`Hello ${name.replace(/[^a-zA-Z]/g, "")}`);
 });
 
 app.listen(3000, () => {
